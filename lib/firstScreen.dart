@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/secondscreen.dart';
 
 class firstscreen extends StatefulWidget {
   const firstscreen({super.key});
@@ -32,7 +33,10 @@ class _firstscreenState extends State<firstscreen> {
                 width: 300,
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => secondscreen()));
+                },
                 child: const Icon(
                   Icons.arrow_forward,
                   size: 30,
